@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="alifu-thaana" format="2">
+  <advance width="542"/>
+  <unicode hex="0787"/>
+  <anchor x="69" y="0" name="b.uni07A8"/>
+  <anchor x="357" y="414" name="t.uni07A6"/>
+  <outline>
+    <contour>
+      <point x="10" y="167" type="curve"/>
+      <point x="59" y="118"/>
+      <point x="117" y="72"/>
+      <point x="159" y="39" type="curve"/>
+      <point x="222" y="110"/>
+      <point x="267" y="165"/>
+      <point x="299" y="209" type="curve"/>
+      <point x="279" y="205" type="line"/>
+      <point x="309" y="205" type="line"/>
+      <point x="310" y="209" type="line"/>
+      <point x="303" y="144"/>
+      <point x="295" y="87"/>
+      <point x="292" y="68" type="curve"/>
+      <point x="488" y="79" type="line"/>
+      <point x="488" y="119"/>
+      <point x="486" y="299"/>
+      <point x="483" y="382" type="curve"/>
+      <point x="255" y="418" type="line"/>
+      <point x="203" y="362"/>
+      <point x="93" y="249"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.category</key>
+      <string>Letter</string>
+      <key>com.schriftgestaltung.Glyphs.glyph.leftMetricsKey</key>
+      <string>haa-thaana</string>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2022/09/07 08:29:28</string>
+      <key>com.schriftgestaltung.Glyphs.script</key>
+      <string>thaana</string>
+    </dict>
+  </lib>
+</glyph>

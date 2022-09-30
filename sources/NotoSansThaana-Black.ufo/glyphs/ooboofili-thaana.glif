@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="ooboofili-thaana" format="2">
+  <unicode hex="07AB"/>
+  <anchor x="300" y="414" name="_t.uni07A6"/>
+  <outline>
+    <component base="ebefili-thaana" xScale="-1" yScale="-1" xOffset="538" yOffset="1264"/>
+    <component base="ebefili-thaana" xScale="-1" yScale="-1" xOffset="355" yOffset="1264"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.category</key>
+      <string>Mark</string>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2022/09/02 11:57:04</string>
+      <key>com.schriftgestaltung.Glyphs.script</key>
+      <string>thaana</string>
+      <key>com.schriftgestaltung.Glyphs.subCategory</key>
+      <string>Nonspacing</string>
+    </dict>
+  </lib>
+</glyph>

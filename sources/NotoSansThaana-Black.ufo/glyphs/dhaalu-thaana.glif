@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="dhaalu-thaana" format="2">
+  <advance width="617"/>
+  <unicode hex="078B"/>
+  <anchor x="191" y="0" name="b.uni07A8"/>
+  <anchor x="305" y="414" name="t.uni07A6"/>
+  <anchor x="335" y="456" name="top"/>
+  <outline>
+    <contour>
+      <point x="-18" y="41" type="curve"/>
+      <point x="29" y="-5"/>
+      <point x="80" y="-48"/>
+      <point x="131" y="-87" type="curve"/>
+      <point x="173" y="-42"/>
+      <point x="224" y="14"/>
+      <point x="268" y="65" type="curve" smooth="yes"/>
+      <point x="315" y="119"/>
+      <point x="358" y="177"/>
+      <point x="358" y="238" type="curve" smooth="yes"/>
+      <point x="358" y="325"/>
+      <point x="298" y="363"/>
+      <point x="239" y="363" type="curve" smooth="yes"/>
+      <point x="157" y="363"/>
+      <point x="101" y="312"/>
+      <point x="101" y="249" type="curve" smooth="yes"/>
+      <point x="101" y="208"/>
+      <point x="119" y="170"/>
+      <point x="171" y="151" type="curve"/>
+      <point x="171" y="227" type="line"/>
+      <point x="145" y="199"/>
+      <point x="128" y="182"/>
+      <point x="102" y="156" type="curve" smooth="yes"/>
+      <point x="71" y="125"/>
+      <point x="37" y="92"/>
+    </contour>
+    <component base="_part.jav" xOffset="7" yOffset="-128"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.ComponentInfo</key>
+      <array>
+        <dict>
+          <key>alignment</key>
+          <integer>-1</integer>
+          <key>index</key>
+          <integer>0</integer>
+          <key>name</key>
+          <string>_part.jav</string>
+        </dict>
+      </array>
+      <key>com.schriftgestaltung.Glyphs.category</key>
+      <string>Letter</string>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2022/09/07 08:30:35</string>
+      <key>com.schriftgestaltung.Glyphs.script</key>
+      <string>thaana</string>
+    </dict>
+  </lib>
+</glyph>

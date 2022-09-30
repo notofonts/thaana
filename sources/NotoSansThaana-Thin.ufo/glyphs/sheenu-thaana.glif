@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="sheenu-thaana" format="2">
+  <advance width="728"/>
+  <unicode hex="079D"/>
+  <anchor x="322" y="0" name="b.uni07A8"/>
+  <anchor x="456" y="414" name="t.uni07A6"/>
+  <outline>
+    <contour>
+      <point x="372" y="349" type="curve" smooth="yes"/>
+      <point x="389" y="349"/>
+      <point x="397" y="357"/>
+      <point x="397" y="374" type="curve" smooth="yes"/>
+      <point x="397" y="394"/>
+      <point x="387" y="399"/>
+      <point x="368" y="399" type="curve" smooth="yes"/>
+      <point x="350" y="399"/>
+      <point x="343" y="388"/>
+      <point x="343" y="369" type="curve" smooth="yes"/>
+      <point x="343" y="353"/>
+      <point x="356" y="349"/>
+    </contour>
+    <contour>
+      <point x="433" y="448" type="curve" smooth="yes"/>
+      <point x="449" y="448"/>
+      <point x="457" y="454"/>
+      <point x="457" y="473" type="curve" smooth="yes"/>
+      <point x="457" y="494"/>
+      <point x="447" y="498"/>
+      <point x="429" y="498" type="curve" smooth="yes"/>
+      <point x="410" y="498"/>
+      <point x="403" y="487"/>
+      <point x="403" y="468" type="curve" smooth="yes"/>
+      <point x="403" y="452"/>
+      <point x="416" y="448"/>
+    </contour>
+    <contour>
+      <point x="502" y="353" type="curve" smooth="yes"/>
+      <point x="517" y="353"/>
+      <point x="526" y="360"/>
+      <point x="526" y="379" type="curve" smooth="yes"/>
+      <point x="526" y="399"/>
+      <point x="516" y="403"/>
+      <point x="499" y="403" type="curve" smooth="yes"/>
+      <point x="479" y="403"/>
+      <point x="471" y="393"/>
+      <point x="471" y="373" type="curve" smooth="yes"/>
+      <point x="471" y="358"/>
+      <point x="486" y="353"/>
+    </contour>
+    <component base="seenu-thaana"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.ComponentInfo</key>
+      <array>
+        <dict>
+          <key>alignment</key>
+          <integer>-1</integer>
+          <key>index</key>
+          <integer>0</integer>
+          <key>name</key>
+          <string>seenu-thaana</string>
+        </dict>
+      </array>
+      <key>com.schriftgestaltung.Glyphs.category</key>
+      <string>Letter</string>
+      <key>com.schriftgestaltung.Glyphs.glyph.leftMetricsKey</key>
+      <string>seenu-thaana</string>
+      <key>com.schriftgestaltung.Glyphs.glyph.rightMetricsKey</key>
+      <string>seenu-thaana</string>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2022/09/07 08:32:52</string>
+      <key>com.schriftgestaltung.Glyphs.script</key>
+      <string>thaana</string>
+    </dict>
+  </lib>
+</glyph>

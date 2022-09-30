@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="chaviyani-thaana" format="2">
+  <advance width="449"/>
+  <unicode hex="0797"/>
+  <anchor x="172" y="0" name="b.uni07A8"/>
+  <anchor x="214" y="414" name="t.uni07A6"/>
+  <outline>
+    <contour>
+      <point x="233" y="340" type="line"/>
+      <point x="258" y="340" type="line"/>
+      <point x="455" y="530" type="line"/>
+      <point x="439" y="546" type="line"/>
+    </contour>
+    <component base="thaa-thaana"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.ComponentInfo</key>
+      <array>
+        <dict>
+          <key>alignment</key>
+          <integer>-1</integer>
+          <key>index</key>
+          <integer>0</integer>
+          <key>name</key>
+          <string>thaa-thaana</string>
+        </dict>
+      </array>
+      <key>com.schriftgestaltung.Glyphs.category</key>
+      <string>Letter</string>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2022/09/07 09:36:17</string>
+      <key>com.schriftgestaltung.Glyphs.script</key>
+      <string>thaana</string>
+    </dict>
+  </lib>
+</glyph>

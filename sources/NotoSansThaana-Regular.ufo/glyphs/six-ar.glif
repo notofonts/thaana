@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="six-ar" format="2">
+  <advance width="491.75"/>
+  <unicode hex="0666"/>
+  <outline>
+    <contour>
+      <point x="353" y="0" type="curve"/>
+      <point x="435" y="7" type="line"/>
+      <point x="405" y="147"/>
+      <point x="362" y="421"/>
+      <point x="365" y="670" type="curve"/>
+      <point x="291" y="643" type="line"/>
+      <point x="285" y="627" type="line"/>
+      <point x="284" y="350"/>
+      <point x="336" y="75"/>
+    </contour>
+    <contour>
+      <point x="326" y="587" type="curve"/>
+      <point x="365" y="670" type="line"/>
+      <point x="270" y="647"/>
+      <point x="123" y="650"/>
+      <point x="32" y="682" type="curve"/>
+      <point x="18" y="604" type="line"/>
+      <point x="102" y="570"/>
+      <point x="243" y="566"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.category</key>
+      <string>Number</string>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2022/09/02 09:02:40</string>
+      <key>com.schriftgestaltung.Glyphs.script</key>
+      <string>arabic</string>
+      <key>com.schriftgestaltung.Glyphs.subCategory</key>
+      <string>Decimal Digit</string>
+    </dict>
+  </lib>
+</glyph>

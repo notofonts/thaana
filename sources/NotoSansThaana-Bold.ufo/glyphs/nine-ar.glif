@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="nine-ar" format="2">
+  <advance width="549"/>
+  <unicode hex="0669"/>
+  <outline>
+    <contour>
+      <point x="369" y="0" type="curve"/>
+      <point x="499" y="23" type="line"/>
+      <point x="476" y="124"/>
+      <point x="462" y="266"/>
+      <point x="454" y="402" type="curve" smooth="yes"/>
+      <point x="446" y="547"/>
+      <point x="403" y="683"/>
+      <point x="248" y="683" type="curve" smooth="yes"/>
+      <point x="117" y="683"/>
+      <point x="20" y="576"/>
+      <point x="20" y="451" type="curve" smooth="yes"/>
+      <point x="20" y="328"/>
+      <point x="102" y="262"/>
+      <point x="232" y="262" type="curve" smooth="yes"/>
+      <point x="274" y="262"/>
+      <point x="320" y="270"/>
+      <point x="367" y="289" type="curve"/>
+      <point x="345" y="413" type="line"/>
+      <point x="314" y="398"/>
+      <point x="282" y="391"/>
+      <point x="245" y="391" type="curve" smooth="yes"/>
+      <point x="189" y="391"/>
+      <point x="163" y="428"/>
+      <point x="163" y="472" type="curve" smooth="yes"/>
+      <point x="163" y="513"/>
+      <point x="191" y="551"/>
+      <point x="233" y="551" type="curve" smooth="yes"/>
+      <point x="294" y="551"/>
+      <point x="312" y="486"/>
+      <point x="319" y="397" type="curve" smooth="yes"/>
+      <point x="330" y="283"/>
+      <point x="333" y="130"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.category</key>
+      <string>Number</string>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2022/09/07 08:34:19</string>
+      <key>com.schriftgestaltung.Glyphs.script</key>
+      <string>arabic</string>
+      <key>com.schriftgestaltung.Glyphs.subCategory</key>
+      <string>Decimal Digit</string>
+    </dict>
+  </lib>
+</glyph>
