@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="seenu-thaana" format="2">
+  <advance width="801"/>
+  <unicode hex="0790"/>
+  <anchor x="334" y="0" name="b.uni07A8"/>
+  <anchor x="508" y="414" name="t.uni07A6"/>
+  <outline>
+    <contour>
+      <point x="241" y="136" type="line"/>
+      <point x="277" y="133"/>
+      <point x="313" y="132"/>
+      <point x="353" y="132" type="curve" smooth="yes"/>
+      <point x="479" y="132"/>
+      <point x="603" y="147"/>
+      <point x="693" y="172" type="curve" smooth="yes"/>
+      <point x="751" y="188"/>
+      <point x="766" y="221"/>
+      <point x="782" y="260" type="curve" smooth="yes"/>
+      <point x="801" y="307"/>
+      <point x="815" y="363"/>
+      <point x="820" y="408" type="curve"/>
+      <point x="719" y="418" type="line"/>
+      <point x="709" y="384"/>
+      <point x="702" y="364"/>
+      <point x="692" y="338" type="curve" smooth="yes"/>
+      <point x="684" y="317"/>
+      <point x="677" y="304"/>
+      <point x="636" y="293" type="curve" smooth="yes"/>
+      <point x="595" y="282"/>
+      <point x="513" y="268"/>
+      <point x="395" y="268" type="curve" smooth="yes"/>
+      <point x="346" y="268"/>
+      <point x="316" y="269"/>
+      <point x="279" y="272" type="curve"/>
+    </contour>
+    <contour>
+      <point x="15" y="88" type="curve"/>
+      <point x="49" y="53"/>
+      <point x="88" y="20"/>
+      <point x="132" y="-11" type="curve"/>
+      <point x="219" y="84"/>
+      <point x="251" y="120"/>
+      <point x="268" y="152" type="curve" smooth="yes"/>
+      <point x="288" y="191"/>
+      <point x="291" y="229"/>
+      <point x="291" y="258" type="curve" smooth="yes"/>
+      <point x="291" y="317"/>
+      <point x="242" y="345"/>
+      <point x="197" y="345" type="curve" smooth="yes"/>
+      <point x="127" y="345"/>
+      <point x="87" y="308"/>
+      <point x="87" y="254" type="curve" smooth="yes"/>
+      <point x="87" y="216"/>
+      <point x="114" y="184"/>
+      <point x="156" y="166" type="curve"/>
+      <point x="140" y="215" type="line"/>
+      <point x="109" y="182"/>
+      <point x="56" y="129"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.category</key>
+      <string>Letter</string>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2022/09/07 09:34:45</string>
+      <key>com.schriftgestaltung.Glyphs.script</key>
+      <string>thaana</string>
+    </dict>
+  </lib>
+</glyph>

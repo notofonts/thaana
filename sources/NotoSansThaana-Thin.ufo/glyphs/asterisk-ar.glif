@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="asterisk-ar" format="2">
+  <advance width="524"/>
+  <unicode hex="066D"/>
+  <outline>
+    <contour>
+      <point x="419" y="-1" type="line"/>
+      <point x="424" y="3" type="line"/>
+      <point x="323" y="194" type="line"/>
+      <point x="504" y="279" type="line"/>
+      <point x="502" y="287" type="line"/>
+      <point x="304" y="267" type="line"/>
+      <point x="266" y="458" type="line"/>
+      <point x="259" y="458" type="line"/>
+      <point x="220" y="266" type="line"/>
+      <point x="22" y="287" type="line"/>
+      <point x="20" y="279" type="line"/>
+      <point x="200" y="192" type="line"/>
+      <point x="100" y="3" type="line"/>
+      <point x="105" y="-1" type="line"/>
+      <point x="262" y="137" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2022/09/06 12:48:44</string>
+      <key>com.schriftgestaltung.Glyphs.script</key>
+      <string>arabic</string>
+      <key>com.schriftgestaltung.Glyphs.subCategory</key>
+      <string>Spacing</string>
+    </dict>
+  </lib>
+</glyph>

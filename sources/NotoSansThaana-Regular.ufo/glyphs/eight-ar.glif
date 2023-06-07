@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="eight-ar" format="2">
+  <advance width="570.75"/>
+  <unicode hex="0668"/>
+  <outline>
+    <contour>
+      <point x="90" y="-4" type="line"/>
+      <point x="159" y="145"/>
+      <point x="255" y="395"/>
+      <point x="294" y="599" type="curve"/>
+      <point x="321" y="680" type="line"/>
+      <point x="243" y="663" type="line"/>
+      <point x="202" y="475"/>
+      <point x="107" y="215"/>
+      <point x="18" y="27" type="curve"/>
+    </contour>
+    <contour>
+      <point x="480" y="-8" type="curve"/>
+      <point x="554" y="20" type="line"/>
+      <point x="471" y="201"/>
+      <point x="372" y="490"/>
+      <point x="322" y="680" type="curve"/>
+      <point x="246" y="659" type="line"/>
+      <point x="277" y="588" type="line"/>
+      <point x="322" y="416"/>
+      <point x="407" y="159"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.category</key>
+      <string>Number</string>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2022/09/02 09:02:40</string>
+      <key>com.schriftgestaltung.Glyphs.script</key>
+      <string>arabic</string>
+      <key>com.schriftgestaltung.Glyphs.subCategory</key>
+      <string>Decimal Digit</string>
+    </dict>
+  </lib>
+</glyph>

@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="quotedbl" format="2">
+  <advance width="454"/>
+  <unicode hex="0022"/>
+  <outline>
+    <contour>
+      <point x="303" y="482" type="line"/>
+      <point x="417" y="482" type="line"/>
+      <point x="486" y="714" type="line"/>
+      <point x="336" y="714" type="line"/>
+    </contour>
+    <contour>
+      <point x="110" y="482" type="line"/>
+      <point x="222" y="482" type="line"/>
+      <point x="292" y="714" type="line"/>
+      <point x="141" y="714" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.category</key>
+      <string>Punctuation</string>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2022/09/06 12:51:34</string>
+      <key>com.schriftgestaltung.Glyphs.subCategory</key>
+      <string>Quote</string>
+    </dict>
+  </lib>
+</glyph>

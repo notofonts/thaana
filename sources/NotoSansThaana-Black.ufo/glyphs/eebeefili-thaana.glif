@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="eebeefili-thaana" format="2">
+  <unicode hex="07A9"/>
+  <anchor x="117" y="0" name="_b.uni07A8"/>
+  <outline>
+    <contour>
+      <point x="215" y="-147" type="curve"/>
+      <point x="155" y="-98" type="line"/>
+      <point x="132" y="-122"/>
+      <point x="51" y="-191"/>
+      <point x="2" y="-232" type="curve"/>
+      <point x="19" y="-254"/>
+      <point x="46" y="-280"/>
+      <point x="73" y="-294" type="curve"/>
+      <point x="124" y="-250"/>
+      <point x="181" y="-189"/>
+    </contour>
+    <contour>
+      <point x="341" y="-195" type="curve"/>
+      <point x="277" y="-151" type="line"/>
+      <point x="255" y="-178"/>
+      <point x="182" y="-254"/>
+      <point x="136" y="-299" type="curve"/>
+      <point x="156" y="-319"/>
+      <point x="184" y="-343"/>
+      <point x="212" y="-355" type="curve"/>
+      <point x="259" y="-306"/>
+      <point x="311" y="-241"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.category</key>
+      <string>Mark</string>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2022/09/01 13:32:33</string>
+      <key>com.schriftgestaltung.Glyphs.script</key>
+      <string>thaana</string>
+      <key>com.schriftgestaltung.Glyphs.subCategory</key>
+      <string>Nonspacing</string>
+    </dict>
+  </lib>
+</glyph>

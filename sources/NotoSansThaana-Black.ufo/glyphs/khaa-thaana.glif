@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="khaa-thaana" format="2">
+  <advance width="388"/>
+  <unicode hex="079A"/>
+  <anchor x="128" y="0" name="b.uni07A8"/>
+  <anchor x="274" y="414" name="t.uni07A6"/>
+  <outline>
+    <component base="haa-thaana" xOffset="20"/>
+    <component base="dotabove" xOffset="-226" yOffset="-292"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.ComponentInfo</key>
+      <array>
+        <dict>
+          <key>alignment</key>
+          <integer>-1</integer>
+          <key>index</key>
+          <integer>0</integer>
+          <key>name</key>
+          <string>haa-thaana</string>
+        </dict>
+        <dict>
+          <key>alignment</key>
+          <integer>-1</integer>
+          <key>index</key>
+          <integer>1</integer>
+          <key>name</key>
+          <string>dotabove</string>
+        </dict>
+      </array>
+      <key>com.schriftgestaltung.Glyphs.category</key>
+      <string>Letter</string>
+      <key>com.schriftgestaltung.Glyphs.glyph.rightMetricsKey</key>
+      <string>haa-thaana</string>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2022/09/05 12:10:05</string>
+      <key>com.schriftgestaltung.Glyphs.script</key>
+      <string>thaana</string>
+    </dict>
+  </lib>
+</glyph>

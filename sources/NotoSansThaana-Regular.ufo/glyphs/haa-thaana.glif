@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="haa-thaana" format="2">
+  <advance width="312"/>
+  <unicode hex="0780"/>
+  <anchor x="25" y="-2" name="b.uni07A8"/>
+  <anchor x="242" y="408" name="t.uni07A6"/>
+  <outline>
+    <contour>
+      <point x="335" y="370" type="curve"/>
+      <point x="274" y="418" type="line"/>
+      <point x="205" y="338"/>
+      <point x="82" y="196"/>
+      <point x="-12" y="93" type="curve"/>
+      <point x="9" y="73"/>
+      <point x="33" y="51"/>
+      <point x="51" y="38" type="curve"/>
+      <point x="134" y="133"/>
+      <point x="269" y="290"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.category</key>
+      <string>Letter</string>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2022/09/07 08:27:46</string>
+      <key>com.schriftgestaltung.Glyphs.script</key>
+      <string>thaana</string>
+    </dict>
+  </lib>
+</glyph>

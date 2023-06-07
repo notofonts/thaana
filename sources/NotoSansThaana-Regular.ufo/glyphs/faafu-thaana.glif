@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="faafu-thaana" format="2">
+  <advance width="395"/>
+  <unicode hex="078A"/>
+  <anchor x="152" y="0" name="b.uni07A8"/>
+  <anchor x="244" y="414" name="t.uni07A6"/>
+  <outline>
+    <contour>
+      <point x="10" y="-28" type="curve"/>
+      <point x="27" y="-48"/>
+      <point x="48" y="-69"/>
+      <point x="69" y="-87" type="curve"/>
+      <point x="151" y="-4"/>
+      <point x="300" y="161"/>
+      <point x="315" y="188" type="curve"/>
+      <point x="315" y="200"/>
+      <point x="310" y="230"/>
+      <point x="302" y="244" type="curve"/>
+      <point x="269" y="244"/>
+      <point x="207" y="240"/>
+      <point x="173" y="237" type="curve"/>
+      <point x="213" y="220" type="line"/>
+      <point x="250" y="259"/>
+      <point x="283" y="294"/>
+      <point x="306" y="321" type="curve"/>
+      <point x="306" y="337"/>
+      <point x="301" y="360"/>
+      <point x="295" y="371" type="curve"/>
+      <point x="266" y="371"/>
+      <point x="214" y="367"/>
+      <point x="188" y="364" type="curve"/>
+      <point x="232" y="354" type="line"/>
+      <point x="254" y="381"/>
+      <point x="282" y="413"/>
+      <point x="304" y="435" type="curve"/>
+      <point x="261" y="476" type="line"/>
+      <point x="229" y="439"/>
+      <point x="185" y="392"/>
+      <point x="151" y="357" type="curve"/>
+      <point x="164" y="309" type="line"/>
+      <point x="193" y="314"/>
+      <point x="236" y="318"/>
+      <point x="256" y="318" type="curve"/>
+      <point x="246" y="345" type="line"/>
+      <point x="221" y="316"/>
+      <point x="170" y="259"/>
+      <point x="133" y="221" type="curve"/>
+      <point x="146" y="171" type="line"/>
+      <point x="179" y="177"/>
+      <point x="233" y="184"/>
+      <point x="250" y="184" type="curve"/>
+      <point x="247" y="214" type="line"/>
+      <point x="188" y="153"/>
+      <point x="80" y="43"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.category</key>
+      <string>Letter</string>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2022/09/07 09:42:27</string>
+      <key>com.schriftgestaltung.Glyphs.script</key>
+      <string>thaana</string>
+    </dict>
+  </lib>
+</glyph>

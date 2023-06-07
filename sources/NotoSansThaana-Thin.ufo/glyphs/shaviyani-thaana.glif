@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="shaviyani-thaana" format="2">
+  <advance width="476"/>
+  <unicode hex="0781"/>
+  <anchor x="132" y="0" name="b.uni07A8"/>
+  <anchor x="387" y="416" name="t.uni07A6"/>
+  <outline>
+    <contour>
+      <point x="247" y="283" type="line"/>
+      <point x="274" y="271"/>
+      <point x="302" y="266"/>
+      <point x="332" y="266" type="curve" smooth="yes"/>
+      <point x="364" y="266"/>
+      <point x="407" y="269"/>
+      <point x="439" y="318" type="curve" smooth="yes"/>
+      <point x="451" y="336"/>
+      <point x="469" y="372"/>
+      <point x="485" y="408" type="curve"/>
+      <point x="465" y="413" type="line"/>
+      <point x="458" y="397"/>
+      <point x="439" y="360"/>
+      <point x="431" y="346" type="curve" smooth="yes"/>
+      <point x="413" y="315"/>
+      <point x="402" y="305"/>
+      <point x="390" y="299" type="curve" smooth="yes"/>
+      <point x="378" y="293"/>
+      <point x="365" y="288"/>
+      <point x="335" y="288" type="curve" smooth="yes"/>
+      <point x="300" y="288"/>
+      <point x="272" y="297"/>
+      <point x="257" y="304" type="curve"/>
+    </contour>
+    <component base="_part.haa" xOffset="-55"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.ComponentInfo</key>
+      <array>
+        <dict>
+          <key>alignment</key>
+          <integer>-1</integer>
+          <key>index</key>
+          <integer>0</integer>
+          <key>name</key>
+          <string>_part.haa</string>
+        </dict>
+      </array>
+      <key>com.schriftgestaltung.Glyphs.category</key>
+      <string>Letter</string>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2022/09/07 09:35:22</string>
+      <key>com.schriftgestaltung.Glyphs.script</key>
+      <string>thaana</string>
+    </dict>
+  </lib>
+</glyph>

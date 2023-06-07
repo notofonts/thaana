@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="ebefili-thaana" format="2">
+  <unicode hex="07AC"/>
+  <anchor x="137" y="414" name="_t.uni07A6"/>
+  <outline>
+    <contour>
+      <point x="101" y="575" type="line"/>
+      <point x="101" y="601" type="line"/>
+      <point x="100" y="586" type="line"/>
+      <point x="122" y="635"/>
+      <point x="170" y="679"/>
+      <point x="217" y="708" type="curve"/>
+      <point x="214" y="715"/>
+      <point x="211" y="721"/>
+      <point x="208" y="727" type="curve"/>
+      <point x="128" y="676"/>
+      <point x="94" y="614"/>
+      <point x="87" y="598" type="curve" smooth="yes"/>
+      <point x="84" y="591"/>
+      <point x="83" y="582"/>
+      <point x="83" y="578" type="curve" smooth="yes"/>
+      <point x="83" y="562"/>
+      <point x="125" y="543"/>
+      <point x="159" y="543" type="curve" smooth="yes"/>
+      <point x="178" y="543"/>
+      <point x="194" y="546"/>
+      <point x="213" y="555" type="curve"/>
+      <point x="213" y="560"/>
+      <point x="213" y="567"/>
+      <point x="213" y="573" type="curve"/>
+      <point x="209" y="577" type="line"/>
+      <point x="190" y="568"/>
+      <point x="174" y="565"/>
+      <point x="162" y="565" type="curve" smooth="yes"/>
+      <point x="138" y="565"/>
+      <point x="113" y="574"/>
+      <point x="98" y="588" type="curve"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.category</key>
+      <string>Mark</string>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2022/09/07 08:35:16</string>
+      <key>com.schriftgestaltung.Glyphs.script</key>
+      <string>thaana</string>
+      <key>com.schriftgestaltung.Glyphs.subCategory</key>
+      <string>Nonspacing</string>
+    </dict>
+  </lib>
+</glyph>
