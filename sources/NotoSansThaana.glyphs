@@ -1,5 +1,8 @@
 {
 .appVersion = "3217";
+DisplayStrings = (
+"/javiyani-thaana"
+);
 classes = (
 {
 code = "allah-ar haa-thaana shaviyani-thaana noonu-thaana raa-thaana baa-thaana lhaviyani-thaana kaafu-thaana alifu-thaana vaavu-thaana meemu-thaana faafu-thaana dhaalu-thaana thaa-thaana laamu-thaana gaafu-thaana gnaviyani-thaana seenu-thaana daviyani-thaana zaviyani-thaana taviyani-thaana yaa-thaana paviyani-thaana javiyani-thaana chaviyani-thaana ttaa-thaana hhaa-thaana khaa-thaana thaalu-thaana zaa-thaana sheenu-thaana saadhu-thaana daadhu-thaana to-thaana zo-thaana ainu-thaana ghainu-thaana qaafu-thaana waavu-thaana naa-thaana colon  exclam parenleft parenright period quotedblleft quotedblright quoteleft quoteright  fullstop-ar comma-ar semicolon-ar question-ar asterisk-ar parenleft-ar parenright-ar quotedbl quotesingle bismillah-ar percent-ar\012";
@@ -7253,9 +7256,6 @@ paths = (
 {
 closed = 1;
 nodes = (
-"34 -37 OFFCURVE",
-"96 -87 OFFCURVE",
-"192 -87 CURVE SMOOTH",
 "223 -87 OFFCURVE",
 "262 -82 OFFCURVE",
 "302 -72 CURVE",
@@ -7274,12 +7274,18 @@ nodes = (
 "147 234 LINE",
 "83 175 OFFCURVE",
 "34 112 OFFCURVE",
-"34 45 CURVE SMOOTH"
+"34 45 CURVE SMOOTH",
+"34 -37 OFFCURVE",
+"96 -87 OFFCURVE",
+"192 -87 CURVE SMOOTH"
 );
 },
 {
 closed = 1;
 nodes = (
+"118 231 OFFCURVE",
+"140 221 OFFCURVE",
+"165 218 CURVE",
 "175 234 OFFCURVE",
 "178 243 OFFCURVE",
 "178 256 CURVE SMOOTH",
@@ -7288,10 +7294,7 @@ nodes = (
 "151 284 CURVE SMOOTH",
 "132 284 OFFCURVE",
 "118 270 OFFCURVE",
-"118 252 CURVE SMOOTH",
-"118 231 OFFCURVE",
-"140 221 OFFCURVE",
-"165 218 CURVE"
+"118 252 CURVE SMOOTH"
 );
 }
 );
@@ -7321,9 +7324,6 @@ paths = (
 {
 closed = 1;
 nodes = (
-"35 -6 OFFCURVE",
-"85 -87 OFFCURVE",
-"223 -87 CURVE SMOOTH",
 "265 -87 OFFCURVE",
 "301 -84 OFFCURVE",
 "350 -74 CURVE",
@@ -7342,7 +7342,10 @@ nodes = (
 "235 258 LINE",
 "92 229 OFFCURVE",
 "35 165 OFFCURVE",
-"35 82 CURVE SMOOTH"
+"35 82 CURVE SMOOTH",
+"35 -6 OFFCURVE",
+"85 -87 OFFCURVE",
+"223 -87 CURVE SMOOTH"
 );
 },
 {
@@ -7389,9 +7392,6 @@ paths = (
 {
 closed = 1;
 nodes = (
-"16 -14 OFFCURVE",
-"69 -87 OFFCURVE",
-"197 -87 CURVE SMOOTH",
 "236 -87 OFFCURVE",
 "273 -83 OFFCURVE",
 "320 -73 CURVE",
@@ -7410,7 +7410,10 @@ nodes = (
 "195 242 LINE",
 "71 208 OFFCURVE",
 "16 148 OFFCURVE",
-"16 73 CURVE SMOOTH"
+"16 73 CURVE SMOOTH",
+"16 -14 OFFCURVE",
+"69 -87 OFFCURVE",
+"197 -87 CURVE SMOOTH"
 );
 },
 {
@@ -7457,9 +7460,6 @@ paths = (
 {
 closed = 1;
 nodes = (
-"21 -26 OFFCURVE",
-"79 -87 OFFCURVE",
-"190 -87 CURVE SMOOTH",
 "230 -87 OFFCURVE",
 "265 -82 OFFCURVE",
 "306 -71 CURVE",
@@ -7478,7 +7478,10 @@ nodes = (
 "177 262 LINE",
 "85 206 OFFCURVE",
 "21 136 OFFCURVE",
-"21 59 CURVE SMOOTH"
+"21 59 CURVE SMOOTH",
+"21 -26 OFFCURVE",
+"79 -87 OFFCURVE",
+"190 -87 CURVE SMOOTH"
 );
 },
 {
