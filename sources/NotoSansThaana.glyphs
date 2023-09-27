@@ -2,7 +2,7 @@
 .appVersion = "3217";
 classes = (
 {
-code = "allah-ar haa-thaana shaviyani-thaana noonu-thaana raa-thaana baa-thaana lhaviyani-thaana kaafu-thaana alifu-thaana vaavu-thaana meemu-thaana faafu-thaana dhaalu-thaana thaa-thaana laamu-thaana gaafu-thaana gnaviyani-thaana seenu-thaana daviyani-thaana zaviyani-thaana taviyani-thaana yaa-thaana paviyani-thaana javiyani-thaana chaviyani-thaana ttaa-thaana hhaa-thaana khaa-thaana thaalu-thaana zaa-thaana sheenu-thaana saadhu-thaana daadhu-thaana to-thaana zo-thaana ainu-thaana ghainu-thaana qaafu-thaana waavu-thaana naa-thaana colon comma exclam parenleft parenright period quotedblleft quotedblright quoteleft quoteright semicolon fullstop-ar comma-ar semicolon-ar question-ar asterisk-ar parenleft-ar parenright-ar quotedbl quotesingle bismillah-ar percent-ar";
+code = "allah-ar haa-thaana shaviyani-thaana noonu-thaana raa-thaana baa-thaana lhaviyani-thaana kaafu-thaana alifu-thaana vaavu-thaana meemu-thaana faafu-thaana dhaalu-thaana thaa-thaana laamu-thaana gaafu-thaana gnaviyani-thaana seenu-thaana daviyani-thaana zaviyani-thaana taviyani-thaana yaa-thaana paviyani-thaana javiyani-thaana chaviyani-thaana ttaa-thaana hhaa-thaana khaa-thaana thaalu-thaana zaa-thaana sheenu-thaana saadhu-thaana daadhu-thaana to-thaana zo-thaana ainu-thaana ghainu-thaana qaafu-thaana waavu-thaana naa-thaana colon  exclam parenleft parenright period quotedblleft quotedblright quoteleft quoteright  fullstop-ar comma-ar semicolon-ar question-ar asterisk-ar parenleft-ar parenright-ar quotedbl quotesingle bismillah-ar percent-ar\012";
 name = AllLetters;
 },
 {
@@ -1521,6 +1521,7 @@ vertWidth = 0;
 width = 1164.75;
 }
 );
+unicode = FDF2;
 script = arabic;
 category = Letter;
 subCategory = Ligature;
