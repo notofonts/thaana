@@ -232,7 +232,7 @@ value = 1;
 },
 {
 name = versionString;
-value = "Version 3.000";
+value = "Version 3.001";
 },
 {
 name = vendorID;
@@ -24972,5 +24972,5 @@ public.kern2.zaviya = (
 };
 };
 versionMajor = 3;
-versionMinor = 0;
+versionMinor = 1;
 }
