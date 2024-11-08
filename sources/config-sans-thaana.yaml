@@ -2,8 +2,9 @@ buildVariable: true
 familyName: Noto Sans Thaana
 googleFonts: true
 includeSubsets:
-- from: Noto Sans
+- force: true
+  from: Noto Sans
   name: GF_Latin_Core
-  force: true
+recipeProvider: noto
 sources:
 - NotoSansThaana.glyphs
