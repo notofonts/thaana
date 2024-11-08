@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Diffenator3</title>
+	<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+		crossorigin="anonymous"></script>
+	<style type="text/css">
+		@font-face {
+      font-family: "Font Before";
+      src: url();
+    }
+
+    @font-face {
+      font-family: "Font After";
+      src: url();
+    }
+
+    .font-before, .font-after {
+      font-variation-settings: "wght" 400, "wdth" 100;
+    }
+
+    .font-before {
+      font-family: "Font Before", "Adobe Notdef";
+    }
+
+    .font-after {
+      font-family: "Font After", "Adobe Notdef";
+    }
+
+	:root {
+	--node-pt-size: 40px;
+	}
+
+	@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    background-color: #b3d4f5 !important;
+    font-family: "Montserrat", sans-serif !important;
+}
+
+.nav-pills .nav-item.show .nav-link, .nav-pills .nav-link.active {
+    background-color: #ced9e4 !important;
+}
+.nav-item {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 2px;
+}
+
+.nav-pills .nav-link{
+    background-color: #9fcaf5 !important;
+}
+h4 {
+    color: #6f7882 !important;
+}
+
+@font-face {
+    font-family: "Adobe NotDef";
+    src: url(https://cdn.jsdelivr.net/gh/adobe-fonts/adobe-notdef/AND-Regular.ttf);
+}
+
+.box-title {
+    width: 100%;
+    font-size: 8pt;
+    font-weight: 700;
+    border-top: 1px solid black;
+    padding-top: 5px;
+    margin-bottom: 10pt;
+    display: block;
+}
+
+.box {
+    margin-bottom: 20pt;
+    width: 100%;
+    float: left;
+}
+
+.box-text {}
+
+#ui-nav {
+    position: fixed;
+    right: 20px;
+    z-index: 100;
+}
+
+#font-toggle {}
+
+.ui-nav-item {
+    display: block;
+    cursor: pointer;
+    -webkit-user-select: none;
+    /* Safari */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* IE10+/Edge */
+    user-select: none;
+    /* Standard */
+    text-align: center;
+    color: white;
+    background-color: black;
+    display: block;
+    font-size: 14pt;
+    padding: 5px;
+    margin: 2px;
+}
+
+/* Stuff needed for the table differ */
+body {
+    font-family: Helvetica;
+}
+
+.node {
+    font-family: courier;
+    cursor: pointer;
+    position: relative;
+    left: 30px;
+    padding: 5px;
+    display: block;
+    border: 1px dashed grey;
+    background-color: #e9e9ee;
+}
+
+.header {
+    font-weight: bold;
+}
+
+.attr-before {
+    color: green;
+    cursor: text;
+}
+
+.attr-after {
+    color: red;
+    cursor: text;
+}
+
+.leaf {
+    font-weight: bold;
+}
+
+.old .cell .new {
+    display: none;
+}
+
+.new .cell .old {
+    display: none;
+}
+
+.both .cell .old {
+    opacity: 0.75;
+    color: red;
+}
+
+.both .cell .new {
+    opacity: 0.75;
+    position: absolute;
+    top: 0;
+    color: green;
+}
+
+.spacer {
+    display: block;
+    float: left;
+    width: 100%;
+}
+
+#ot-panel {
+    max-height: 400px;
+    overflow-y: scroll;
+    background: white;
+    padding: 10px;
+    display: none;
+   }
+
+   .cell{
+    z-index: -100;
+    float: left;
+    display: block;
+    text-align: center;
+    padding: 5pt;
+    margin: 5pt;
+    width: 50pt;
+    font-size: var(--node-pt-size);
+    line-height: calc(var(--node-pt-size) * 1.5);
+  }
+  .cell-word{
+    z-index: -100;
+    float: left;
+    display: block;
+    text-align: center;
+    padding: 5pt;
+    margin: 5pt;
+    font-size: var(--node-pt-size);
+    line-height: calc(var(--node-pt-size) * 1.5);
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  }
+  .cell-glyph{
+    z-index: -100;
+    float: left;
+    display: block;
+    text-align: center;
+    border-radius: 5pt;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    padding: 5pt;
+    margin: 5pt;
+    width: calc(var(--node-pt-size) * 2);
+    min-height: calc(var(--node-pt-size) * 2);
+    font-size: var(--node-pt-size);
+  }
+  .cell-glyph.font-before, .cell-word.font-before {
+    background: #eff6f2;
+  }
+  .cell-glyph.font-after, .cell-word.font-after {
+    background: #f7f4f4;
+  }
+
+  .cell-glyph:hover {
+    box-shadow: none;
+    background: #f0f0f5;
+  }
+  .cat-strings .cell {
+    clear: both;
+    position: static;
+    float: none;
+    text-align: left;
+  }
+  .codepoint {
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 10pt;
+    line-height: 10pt;
+  }
+  .box-title {
+    clear: both;
+  }
+  .node.closed::before {
+    content: "+";
+    margin-right: 5pt;
+  }
+  .node.open::before {
+    content: "-";
+    margin-right: 5pt;
+  }
+
+  .tooltip pre {
+    background-color: #6f7882;
+    padding: 5px;
+    white-space: pre-wrap;
+    word-break: break-all;
+  }
+  .tooltip {
+    line-height: 1em;
+  }
+  .tooltip-inner {
+    max-width: 300px;
+  }
+
+  h1,h2,h3,h4,h5 {
+    clear: both;
+  }
+
+  #locationnav li {
+    white-space: wrap;
+  }
+
+  #userdefined div { width: 100%; }
+  
+/* The following rules are used in the WASM version, not in the CLI version.
+   But we keep them here so we can share them between the two versions. */
+
+   .modal-dialog {
+    max-width: 100% !important;
+    margin: 0 !important;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    display: flex;
+  }
+
+  .fontdrop {
+    padding: 30px;
+    border-radius: 20px;
+    outline: 3px dashed #ffffffff;
+    outline-offset: -20px;
+  }
+
+  #fontbefore {
+    background-color: #ddffdddd;
+  }
+
+  #fontafter {
+    background-color: #ffdddddd;
+  }
+
+  .dragging {
+    background-image: linear-gradient(rgb(0 0 0/5%) 0 0);
+    outline: 5px dashed #ffffffff;
+  }
+
+  #diffkerns {
+    max-height: 500px;
+    overflow-y: scroll;
+  }
+		</style>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+	integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+		<div id="ui-nav">
+		  <div class="ui-nav-item" id="fonttoggle">Old</div>
+		  <div class="ui-nav-item" id="fontanimate">Animate</div>
+		  <div id="axes">
+		  </div>
+		</div>
+	
+	<div class="row">
+		<div class="col-2">
+			<ul class="nav nav-pills" id="locationnav">
+			</ul>
+		</div>
+		<div class="col-9 mt-3">
+			<div id="title"></div>
+			<div id="cmapdiff"> </div>
+			<div id="main"></div>
+			<div id="userdefined">
+				<h4>User defined sample text</h4>
+				<div contenteditable="true" class="font-before cell-word">
+					You can type your own text here to see it previewed in the fonts.
+				</div>
+				<div style="clear: both"></div>
+			</div>
+			<div id="diffkerns"> </div>
+			<div id="difftable"> </div>
+		</div>
+	</div>
+	<script type="module">
+		function renderTableDiff(node, toplevel) {
+  var wrapper = $("<div> </div>");
+  if (!node) {
+    return wrapper;
+  }
+  if (Array.isArray(node) && node.length == 2) {
+    var before = $("<span/>");
+    before.addClass("attr-before");
+    before.html(" " + node[0] + " ");
+    var after = $("<span/>");
+    after.addClass("attr-after");
+    after.append(renderTableDiff(node[1], true).children());
+    wrapper.append(before);
+    wrapper.append(after);
+    return wrapper;
+  }
+  if (node.constructor != Object) {
+    var thing = $("<span/>");
+    thing.html(node);
+    wrapper.append(thing);
+    return wrapper;
+  }
+  for (const [key, value] of Object.entries(node)) {
+    var display = $("<div/>");
+    display.addClass("node");
+    if (!toplevel) {
+      display.hide();
+    }
+    display.append(key);
+    display.append(renderTableDiff(value, false).children());
+    if (display.children(".node").length > 0) {
+      display.addClass("closed");
+    }
+    wrapper.append(display);
+  }
+  return wrapper;
+}
+
+function addAGlyph(glyph, where) {
+  let title = "";
+  if (glyph.name) {
+    title = "name: " + glyph.name;
+  }
+  let cp =
+    "<br>U+" +
+    glyph.string.codePointAt(0).toString(16).padStart(4, "0").toUpperCase();
+  where.append(`
+        <div class="cell-glyph font-before">
+        <div data-toggle="tooltip" data-html="true" data-title="${glyph.differing_pixels} pixels"> ${glyph.string}
+        <div class="codepoint" data-toggle="tooltip" data-html="true" data-title="${title}">
+		${cp}
+        </div>
+        </div>
+    `);
+}
+
+function addAWord(diff, where) {
+  if (!diff.buffer_b) {
+    diff.buffer_b = diff.buffer_a;
+  }
+  where.append(`
+		<div class="cell-word font-before">
+		<span data-toggle="tooltip" data-html="true" data-title="Before: <pre>${diff.buffer_a}</pre>After: <pre>${diff.buffer_b}</pre><br>difference: ${diff.differing_pixels} pixels">
+		${diff.word}
+		</span>
+		</div>
+	`);
+}
+
+function diffTables(report) {
+  $("#difftable").empty();
+  $("#difftable").append(`<h4 class="mt-2 box-title">Table-level details</h4>`);
+  $("#difftable").append(
+    renderTableDiff({ tables: report["tables"] }, true).children()
+  );
+  $("#difftable .node").on("click", function (e) {
+    $(this).toggleClass("closed open");
+    $(this).children(".node").toggle();
+    e.stopPropagation();
+  });
+}
+function diffKerns(report) {
+  $("#diffkerns").empty();
+  $("#diffkerns").append(`<h4 class="mt-2">Modified Kerns</h4>`);
+  $("#diffkerns").append(
+    `<table class="table table-striped" id="diffkerns"><tr><th>Pair</th><th>Old</old><th>New</th></table>`
+  );
+  for (let [pair, value] of Object.entries(report["kerns"])) {
+    if (pair == "error") {
+      $("#diffkerns").append(`<p class="text-danger">Error: ${value}</p>`);
+      continue;
+    } else {
+      let row = $("<tr>");
+      row.append(`<td>${pair}</td>`);
+      row.append(`<td>${serializeKernBefore(value)}</td>`);
+      row.append(`<td>${serializeKernAfter(value)}</td>`);
+      $("#diffkerns table").append(row);
+    }
+  }
+}
+
+function serializeKernBefore(kern) {
+  if (Array.isArray(kern)) {
+    return serializeKern(kern[0], -1);
+  }
+  return serializeKern(kern, 0);
+}
+
+function serializeKernAfter(kern) {
+  if (Array.isArray(kern)) {
+    return serializeKern(kern[1], -1);
+  }
+  return serializeKern(kern, 1);
+}
+
+function serializeKern(kern, index) {
+  let string = "";
+  if (kern === null || kern === undefined) {
+    return "(null)";
+  }
+  if (kern.x) {
+    string += serializeKernValue(kern.x, index);
+  } else if (kern.y) {
+    string = "0";
+  }
+
+  if (kern.y) {
+    string += "," + serializeKernValue(kern.y, index);
+  }
+  if (!kern.x_placement && !kern.y_placement) {
+    return string;
+  }
+  string += "@";
+  if (kern.x_placement) {
+    string += serializeKernValue(kern.x_placement, index);
+  } else if (kern.y_placement) {
+    string += "0";
+  }
+  if (kern.y_placement) {
+    string += "," + serializeKernValue(kern.y_placement, index);
+  }
+  return string;
+}
+
+function serializeKernValue(kern, index) {
+  if (typeof kern == "number") {
+    return kern;
+  }
+  let string = "(";
+  let verybig = Object.entries(kern).length > 5;
+  for (let [key, value] of Object.entries(kern)) {
+    if (key == "default") {
+      string += value[index] + " ";
+    } else {
+      string += value[index] + "@" + key + " ";
+    }
+    if (verybig) {
+      string += "<br>";
+    }
+  }
+  return string.trim() + ")";
+}
+
+function cmapDiff(report) {
+  if (report.cmap_diff && (report.cmap_diff.new || report.cmap_diff.missing)) {
+    $("#cmapdiff").append(
+      `<h4 class="mt-2">Added and Removed Encoded Glyphs</h4>`
+    );
+    if (report["cmap_diff"]["new"]) {
+      $("#cmapdiff").append(`<h4 class="box-title">Added Glyphs</h4>`);
+      let added = $("<div>");
+      for (let glyph of report["cmap_diff"]["new"]) {
+        addAGlyph(glyph, added);
+      }
+      $("#cmapdiff").append(added);
+    }
+
+    if (report["cmap_diff"]["missing"]) {
+      $("#cmapdiff").append(`<h4 class="box-title">Removed Glyphs</h4>`);
+      let missing = $("<div>");
+      for (let glyph of report["cmap_diff"]["missing"]) {
+        addAGlyph(glyph, missing);
+      }
+      $("#cmapdiff").append(missing);
+    }
+  } else {
+    $("#cmapdiff").append(`<p>No changes to encoded glyphs</p>`);
+  }
+}
+
+function setupAnimation() {
+  $("#fonttoggle").click(function () {
+    if ($(this).text() == "Old") {
+      $(this).text("New");
+      $(".font-before").removeClass("font-before").addClass("font-after");
+    } else {
+      $(this).text("Old");
+      $(".font-after").removeClass("font-after").addClass("font-before");
+    }
+  });
+
+  let animationHandle;
+  function animate() {
+    $("#fonttoggle").click();
+    animationHandle = setTimeout(animate, 1000);
+  }
+  $("#fontanimate").click(function () {
+    if ($(this).text() == "Animate") {
+      $(this).text("Stop");
+      animate();
+    } else {
+      $(this).text("Animate");
+      clearTimeout(animationHandle);
+    }
+  });
+}
+
+export {
+  renderTableDiff,
+  addAGlyph,
+  addAWord,
+  cmapDiff,
+  diffTables,
+  diffKerns,
+  setupAnimation,
+};
+
+	var report = {"tables":{"GPOS":{"script_list":{"DFLT/dflt":{"lookups":{"0":[1,0],"1":[null,1]}}},"feature_list":{"mark":{"1":[null,2],"2":[null,3]}},"lookup_list":{"0":{"1":{"classes":{"@CLASS_L_0":{"0":["laamuthaana","waavuthaana"],"1":["raathaana","laamuthaana"],"2":["faafuthaana","zaathaana"],"3":["waavuthaana","raathaana"],"5":["zaathaana","faafuthaana"]},"@CLASS_L_1":{"0":["seenuthaana","alifuthaana"],"1":["sheenuthaana","tothaana"],"2":["saadhuthaana","zothaana"],"3":["daadhuthaana","ainuthaana"]},"@CLASS_L_2":{"0":["alifuthaana","seenuthaana"],"1":["tothaana","sheenuthaana"],"2":["zothaana","saadhuthaana"],"3":["ainuthaana","daadhuthaana"]},"@CLASS_R_1":{"0":["zaviyanithaana","seenuthaana"],"1":["taviyanithaana","sheenuthaana"],"2":["javiyanithaana","saadhuthaana"],"3":["tothaana","daadhuthaana"]},"@CLASS_R_2":{"0":["seenuthaana","zaviyanithaana"],"1":["sheenuthaana","taviyanithaana"],"2":["saadhuthaana","javiyanithaana"],"3":["daadhuthaana","tothaana"]},"@CLASS_R_4":{"0":["thaathaana","raathaana"],"1":["zothaana","zaathaana"]},"@CLASS_R_5":{"0":["raathaana","thaathaana"],"1":["zaathaana","zothaana"]}},"kerns":{"@CLASS_L_0":{"@CLASS_R_1":{"x":[-17,0],"x_placement":[-17,0]},"@CLASS_R_2":{"x":[0,-17],"x_placement":[0,-17]}},"@CLASS_L_1":{"@CLASS_R_1":{"x":[-13,-7],"x_placement":[-13,-7]},"@CLASS_R_3":{"x":[0,-27],"x_placement":[0,-27]},"@CLASS_R_4":{"x":[-13,-23],"x_placement":[-13,-23]},"@CLASS_R_6":{"x":[0,-3],"x_placement":[0,-3]}},"@CLASS_L_2":{"@CLASS_R_2":{"x":[-7,-13],"x_placement":[-7,-13]},"@CLASS_R_3":{"x":[-27,0],"x_placement":[-27,0]},"@CLASS_R_5":{"x":[-23,-13],"x_placement":[-23,-13]},"@CLASS_R_6":{"x":[-3,0],"x_placement":[-3,0]}},"@CLASS_L_3":{"@CLASS_R_4":{"x":[-10,0],"x_placement":[-10,0]},"@CLASS_R_5":{"x":[0,-10],"x_placement":[0,-10]}}}}},"1":{"0":{"marks":{"anchor_0":{"dotabove":[{"x":313,"y":568},null],"ibifilithaana":[null,{"x":107,"y":0}],"eebeefilithaana":[null,{"x":131,"y":0}]},"anchor_1":[{"abafilithaana":{"x":181,"y":414},"aabaafilithaana":{"x":199,"y":414},"ubufilithaana":{"x":128,"y":414},"ooboofilithaana":{"x":289,"y":414},"ebefilithaana":{"x":120,"y":414},"eybeyfilithaana":{"x":276,"y":415},"obofilithaana":{"x":243,"y":415},"oaboafilithaana":{"x":181,"y":414},"sukunthaana":{"x":127,"y":414}},null],"anchor_2":[{"ibifilithaana":{"x":107,"y":0},"eebeefilithaana":{"x":131,"y":0}},null]},"bases":{"haathaana":{"anchor_1":[{"x":252,"y":406},null],"anchor_2":[{"x":30,"y":-3},null],"anchor_0":[null,{"x":30,"y":-3}]},"shaviyanithaana":{"anchor_1":[{"x":392,"y":423},null],"anchor_2":[{"x":140,"y":0},null],"anchor_0":[null,{"x":140,"y":0}]},"noonuthaana":{"anchor_1":[{"x":472,"y":414},null],"anchor_2":[{"x":168,"y":0},null],"anchor_0":[null,{"x":168,"y":0}]},"raathaana":{"anchor_1":[{"x":373,"y":415},null],"anchor_2":[{"x":131,"y":0},null],"anchor_0":[null,{"x":131,"y":0}]},"baathaana":{"anchor_1":[{"x":354,"y":415},null],"anchor_2":[{"x":143,"y":0},null],"anchor_0":[null,{"x":143,"y":0}]},"lhaviyanithaana":{"anchor_1":[{"x":261,"y":414},null],"anchor_2":[{"x":55,"y":0},null],"anchor_0":[null,{"x":55,"y":0}]},"kaafuthaana":{"anchor_1":[{"x":297,"y":414},null],"anchor_2":[{"x":113,"y":0},null],"anchor_0":[null,{"x":113,"y":0}]},"alifuthaana":{"anchor_1":[{"x":311,"y":414},null],"anchor_2":[{"x":75,"y":0},null],"anchor_0":[null,{"x":75,"y":0}]},"vaavuthaana":{"anchor_1":[{"x":284,"y":415},null],"anchor_2":[{"x":174,"y":0},null],"anchor_0":[null,{"x":174,"y":0}]},"meemuthaana":{"anchor_1":[{"x":259,"y":414},null],"anchor_2":[{"x":44,"y":0},null],"anchor_0":[null,{"x":44,"y":0}]},"faafuthaana":{"anchor_1":[{"x":235,"y":417},null],"anchor_2":[{"x":143,"y":0},null],"anchor_0":[null,{"x":143,"y":0}]},"dhaaluthaana":{"anchor_0":{"x":[288,151],"y":[431,0]},"anchor_1":[{"x":285,"y":414},null],"anchor_2":[{"x":151,"y":0},null]},"thaathaana":{"anchor_1":[{"x":322,"y":414},null],"anchor_2":[{"x":126,"y":0},null],"anchor_0":[null,{"x":126,"y":0}]},"laamuthaana":{"anchor_1":[{"x":243,"y":414},null],"anchor_2":[{"x":133,"y":0},null],"anchor_0":[null,{"x":133,"y":0}]},"gaafuthaana":{"anchor_1":[{"x":274,"y":414},null],"anchor_2":[{"x":80,"y":0},null],"anchor_0":[null,{"x":80,"y":0}]},"gnaviyanithaana":{"anchor_1":[{"x":420,"y":414},null],"anchor_2":[{"x":46,"y":-31},null],"anchor_0":[null,{"x":46,"y":-31}]},"seenuthaana":{"anchor_1":[{"x":497,"y":414},null],"anchor_2":[{"x":329,"y":0},null],"anchor_0":[null,{"x":329,"y":0}]},"daviyanithaana":{"anchor_1":[{"x":230,"y":414},null],"anchor_2":[{"x":110,"y":0},null],"anchor_0":[null,{"x":110,"y":0}]},"zaviyanithaana":{"anchor_1":[{"x":324,"y":414},null],"anchor_2":[{"x":97,"y":-29},null],"anchor_0":[null,{"x":97,"y":-29}]},"taviyanithaana":{"anchor_1":[{"x":317,"y":414},null],"anchor_2":[{"x":57,"y":-29},null],"anchor_0":[null,{"x":57,"y":-29}]},"yaathaana":{"anchor_1":[{"x":422,"y":414},null],"anchor_2":[{"x":119,"y":0},null],"anchor_0":[null,{"x":119,"y":0}]},"paviyanithaana":{"anchor_1":[{"x":250,"y":414},null],"anchor_2":[{"x":138,"y":-10},null],"anchor_0":[null,{"x":138,"y":-10}]},"javiyanithaana":{"anchor_1":[{"x":271,"y":414},null],"anchor_2":[{"x":43,"y":-29},null],"anchor_0":[null,{"x":43,"y":-29}]},"chaviyanithaana":{"anchor_1":[{"x":207,"y":414},null],"anchor_2":[{"x":176,"y":0},null],"anchor_0":[null,{"x":176,"y":0}]},"ttaathaana":{"anchor_1":[{"x":404,"y":414},null],"anchor_2":[{"x":212,"y":0},null],"anchor_0":[null,{"x":212,"y":0}]},"hhaathaana":{"anchor_1":[{"x":305,"y":414},null],"anchor_2":[{"x":119,"y":0},null],"anchor_0":[null,{"x":119,"y":0}]},"khaathaana":{"anchor_1":[{"x":269,"y":414},null],"anchor_2":[{"x":144,"y":0},null],"anchor_0":[null,{"x":144,"y":0}]},"thaaluthaana":{"anchor_0":{"x":[293,166],"y":[431,0]},"anchor_1":[{"x":446,"y":424},null],"anchor_2":[{"x":166,"y":0},null]},"zaathaana":{"anchor_1":[{"x":355,"y":414},null],"anchor_2":[{"x":204,"y":0},null],"anchor_0":[null,{"x":204,"y":0}]},"sheenuthaana":{"anchor_1":[{"x":483,"y":438},null],"anchor_2":[{"x":370,"y":0},null],"anchor_0":[null,{"x":370,"y":0}]},"saadhuthaana":{"anchor_1":[{"x":483,"y":438},null],"anchor_2":[{"x":345,"y":0},null],"anchor_0":[null,{"x":345,"y":0}]},"daadhuthaana":{"anchor_1":[{"x":483,"y":438},null],"anchor_2":[{"x":397,"y":0},null],"anchor_0":[null,{"x":397,"y":0}]},"tothaana":{"anchor_1":[{"x":366,"y":414},null],"anchor_2":[{"x":170,"y":0},null],"anchor_0":[null,{"x":170,"y":0}]},"zothaana":{"anchor_1":[{"x":362,"y":414},null],"anchor_2":[{"x":170,"y":0},null],"anchor_0":[null,{"x":170,"y":0}]},"ainuthaana":{"anchor_1":[{"x":353,"y":412},null],"anchor_2":[{"x":153,"y":0},null],"anchor_0":[null,{"x":153,"y":0}]},"ghainuthaana":{"anchor_1":[{"x":307,"y":414},null],"anchor_2":[{"x":153,"y":0},null],"anchor_0":[null,{"x":153,"y":0}]},"qaafuthaana":{"anchor_1":[{"x":329,"y":414},null],"anchor_2":[{"x":127,"y":0},null],"anchor_0":[null,{"x":127,"y":0}]},"waavuthaana":{"anchor_1":[{"x":201,"y":414},null],"anchor_2":[{"x":216,"y":0},null],"anchor_0":[null,{"x":216,"y":0}]},"naathaana":{"anchor_1":[{"x":310,"y":414},null],"anchor_2":[{"x":90,"y":-30},null],"anchor_0":[null,{"x":90,"y":-30}]},"uni25CC":{"anchor_1":[{"x":297,"y":617},null],"anchor_2":[{"x":297,"y":-59},null],"anchor_0":[null,{"x":297,"y":-59}]}}}},"2":[null,[{"type":"mark_to_base","marks":{"anchor_0":{"abafilithaana":{"x":181,"y":414},"aabaafilithaana":{"x":199,"y":414},"ubufilithaana":{"x":128,"y":414},"ooboofilithaana":{"x":289,"y":414},"ebefilithaana":{"x":120,"y":414},"eybeyfilithaana":{"x":276,"y":415},"obofilithaana":{"x":243,"y":415},"oaboafilithaana":{"x":181,"y":414},"sukunthaana":{"x":127,"y":414}}},"bases":{"haathaana":{"anchor_0":{"x":252,"y":406}},"shaviyanithaana":{"anchor_0":{"x":392,"y":423}},"noonuthaana":{"anchor_0":{"x":472,"y":414}},"raathaana":{"anchor_0":{"x":373,"y":415}},"baathaana":{"anchor_0":{"x":354,"y":415}},"lhaviyanithaana":{"anchor_0":{"x":261,"y":414}},"kaafuthaana":{"anchor_0":{"x":297,"y":414}},"alifuthaana":{"anchor_0":{"x":311,"y":414}},"vaavuthaana":{"anchor_0":{"x":284,"y":415}},"meemuthaana":{"anchor_0":{"x":259,"y":414}},"faafuthaana":{"anchor_0":{"x":235,"y":417}},"dhaaluthaana":{"anchor_0":{"x":285,"y":414}},"thaathaana":{"anchor_0":{"x":322,"y":414}},"laamuthaana":{"anchor_0":{"x":243,"y":414}},"gaafuthaana":{"anchor_0":{"x":274,"y":414}},"gnaviyanithaana":{"anchor_0":{"x":420,"y":414}},"seenuthaana":{"anchor_0":{"x":497,"y":414}},"daviyanithaana":{"anchor_0":{"x":230,"y":414}},"zaviyanithaana":{"anchor_0":{"x":324,"y":414}},"taviyanithaana":{"anchor_0":{"x":317,"y":414}},"yaathaana":{"anchor_0":{"x":422,"y":414}},"paviyanithaana":{"anchor_0":{"x":250,"y":414}},"javiyanithaana":{"anchor_0":{"x":271,"y":414}},"chaviyanithaana":{"anchor_0":{"x":207,"y":414}},"ttaathaana":{"anchor_0":{"x":404,"y":414}},"hhaathaana":{"anchor_0":{"x":305,"y":414}},"khaathaana":{"anchor_0":{"x":269,"y":414}},"thaaluthaana":{"anchor_0":{"x":446,"y":424}},"zaathaana":{"anchor_0":{"x":355,"y":414}},"sheenuthaana":{"anchor_0":{"x":483,"y":438}},"saadhuthaana":{"anchor_0":{"x":483,"y":438}},"daadhuthaana":{"anchor_0":{"x":483,"y":438}},"tothaana":{"anchor_0":{"x":366,"y":414}},"zothaana":{"anchor_0":{"x":362,"y":414}},"ainuthaana":{"anchor_0":{"x":353,"y":412}},"ghainuthaana":{"anchor_0":{"x":307,"y":414}},"qaafuthaana":{"anchor_0":{"x":329,"y":414}},"waavuthaana":{"anchor_0":{"x":201,"y":414}},"naathaana":{"anchor_0":{"x":310,"y":414}},"uni25CC":{"anchor_0":{"x":297,"y":617}}}}]],"3":[null,[{"type":"mark_to_base","marks":{"anchor_0":{"dotabove":{"x":313,"y":568}}},"bases":{"dhaaluthaana":{"anchor_0":{"x":288,"y":431}},"thaaluthaana":{"anchor_0":{"x":293,"y":431}}}}]]}},"head":{"checksum_adjustment":[2963034655,101128757],"modified":[3778666287,3813911362]},"hhea":{"caret_slope_rise":[1,1000]},"loca":{"offsets":{"25":[4648,4640],"26":[4868,4860],"27":[5192,5184],"28":[5228,5220],"29":[5264,5256],"30":[5300,5292],"31":[5336,5328],"32":[5668,5660],"33":[5704,5696],"34":[5740,5732],"35":[5772,5764],"36":[5808,5800],"37":[5840,5832],"38":[5876,5868],"39":[6080,6072],"40":[6116,6108],"41":[6288,6280],"42":[6412,6404],"43":[6488,6480],"44":[6624,6616],"45":[6816,6808],"46":[6948,6940],"47":[7116,7108],"48":[7308,7300],"49":[7388,7380],"50":[7600,7592],"51":[7788,7780],"52":[7832,7824],"53":[7900,7892],"54":[8036,8028],"55":[8364,8356],"56":[8524,8516],"57":[8664,8656],"58":[8776,8768],"59":[8856,8848],"60":[8940,8932],"61":[9100,9092],"62":[9184,9176],"63":[9268,9260],"64":[9344,9336],"65":[9420,9412],"66":[9444,9436],"67":[9588,9580],"68":[9676,9668],"69":[9760,9752],"70":[9844,9836],"71":[9900,9892],"72":[9976,9968],"73":[10012,10004],"74":[10048,10040],"75":[10156,10148],"76":[10240,10232],"77":[10256,10248],"78":[10272,10264],"79":[10288,10280],"80":[10316,10308],"81":[10352,10344],"82":[10552,10544],"83":[10636,10628],"84":[10636,10628],"85":[10636,10628],"86":[10636,10628],"87":[10728,10720],"88":[10820,10812],"89":[10820,10812],"90":[10820,10812],"91":[10820,10812],"92":[10820,10812],"93":[11536,11528],"94":[11628,11620],"95":[16116,16108],"96":[16192,16184],"97":[16264,16256],"98":[16320,16312],"99":[16416,16408],"100":[16472,16464],"101":[16564,16556],"102":[16692,16684],"103":[16912,16900],"104":[17040,17028],"105":[17064,17052],"106":[17272,17260],"107":[17420,17408],"108":[17556,17544]}},"name":{"UNIQUE_ID":{"en-US":["3.001;GOOG;NotoSansThaana-Medium","3.000;GOOG;NotoSansThaana-Medium"]},"VERSION_STRING":{"en-US":["Version 3.001; ttfautohint (v1.8.4.7-5d5b)","Version 3.000; ttfautohint (v1.8.4.7-5d5b)"]}}},"cmap_diff":{},"locations":[{"location":"Default","words":{}}]};
+		function buildLocation_statichtml(loc) {
+  // Set font styles to appropriate axis locations
+  let rule = document.styleSheets[0].cssRules[2].style;
+  let cssSetting = "";
+  let textLocation = "Default";
+  if (loc.coords) {
+    cssSetting = Object.entries(loc.coords)
+      .map(function ([axis, value]) {
+        return `"${axis}" ${value}`;
+      })
+      .join(", ");
+    textLocation = Object.entries(loc.coords)
+      .map(function ([axis, value]) {
+        return `${axis}=${value}`;
+      })
+      .join(" ");
+    rule.setProperty("font-variation-settings", cssSetting);
+  }
+
+  $("#main").empty();
+
+  $("#title").html(`<h4 class="mt-2">${textLocation}</h2>`);
+
+  if (loc.glyphs) {
+    $("#main").append("<h4>Modified Glyphs</h4>");
+    let glyphs = $("<div>");
+    for (let glyph of loc.glyphs) {
+      addAGlyph(glyph, glyphs);
+    }
+    $("#main").append(glyphs);
+  }
+
+  if (loc.words) {
+    $("#main").append("<h4>Modified Words</h4>");
+    for (let [script, words] of Object.entries(loc.words)) {
+      let scriptTitle = $(`<h6>${script}</h6>`);
+      $("#main").append(scriptTitle);
+      let worddiv = $("<div>");
+      for (let word of words) {
+        addAWord(word, worddiv);
+      }
+      $("#main").append(worddiv);
+    }
+  }
+  $('[data-toggle="tooltip"]').tooltip();
+}
+
+$(function () {
+  if (report["tables"]) {
+    diffTables(report);
+  }
+  if (report["kerns"]) {
+    diffKerns(report);
+  }
+  cmapDiff(report);
+  $('[data-toggle="tooltip"]').tooltip();
+  if (!report["locations"]) {
+    $("#title").html("<h4 class='mt-2'>No differences found</h4>");
+    $("#ui-nav").hide();
+    return;
+  }
+
+  for (var [index, loc] of report["locations"].entries()) {
+    var loc_nav = $(`<li class="nav-item">
+		<a class="nav-link text-secondary" href="#" data-index="${index}">${loc.location.replaceAll(
+      ",",
+      ",\u200b"
+    )}</a>
+	</li>`);
+    $("#locationnav").append(loc_nav);
+  }
+  $("#locationnav li a").on("click", function (e) {
+    $("#locationnav li a").removeClass("active");
+    $(this).addClass("active");
+    buildLocation_statichtml(report.locations[$(this).data("index")]);
+  });
+  $("#locationnav li a").eq(0).click();
+
+  document.styleSheets[0].cssRules[0].style.setProperty(
+    "src",
+    "url(old-NotoSansThaana-Medium.ttf)"
+  );
+  document.styleSheets[0].cssRules[1].style.setProperty(
+    "src",
+    "url(new-NotoSansThaana-Medium.ttf)"
+  );
+  setupAnimation();
+});
+
+	</script>
+</body>
+
+</html>
